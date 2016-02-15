@@ -1,0 +1,33 @@
+<h1>TablaMultiplicar</h1>
+
+<form action="/TablaMultiplicar/mostrar">
+	<input type="number" name="numero" />
+	<input type="submit" value="Sácala!" />
+</form>
+
+<p> Recomendable cantarlo como antaño </p>
+<table border="1" width="200px" style="border-collapse: collapse; text-align: center; margin-top: 10px; color: blue; border-color:#008000; border-style: dotted;">
+	
+<% 
+	
+	#empezamos a hacer ruby!
+	numero = params[:numero]
+	if numero != nil
+		numero = numero.to_i
+		for i in (1..10)
+			valor = i * numero
+%>
+				
+			 <tr>
+					<td><%=numero%> por <%=i%> </td>
+					<td> <%=valor%></td>		
+			 </tr>
+
+<%
+		end
+	end	
+%>
+
+	
+</table>
+

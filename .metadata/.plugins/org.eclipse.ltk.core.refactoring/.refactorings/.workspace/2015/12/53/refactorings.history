@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CursoRuby/src/_01_variables/Variables&apos;" deleteContents="false" description="Delete resource &apos;CursoRuby/src/_01_variables/Variables&apos;" element1="/CursoRuby/src/_01_variables/Variables" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1451391992970"/>
+</session>

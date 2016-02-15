@@ -1,0 +1,14 @@
+<h1> Bienvenido al Alta de Clientes </h1>
+<h2>A continuación podrá modificar los datos del cliente elegido</h2>
+
+<form action="/Clientes/procesarModificar">
+	<table>
+		    <input type="hidden" name="id" value="<%=@cliente.id%>" />
+		<tr><td class="dcha"><label>Nombre:</label></td> <td class="izq"> <input type="text" name="nombre" value="<%=@cliente.nombre%>"/> </td></tr>
+		<tr><td class="dcha"><label>Apellidos:</label></td><td class="izq"> <input type="text" name="apellidos" value="<%=@cliente.apellidos%>"/> </td></tr>
+		<tr><td class="dcha"><label>Edad:</label></td> <td class="izq"><input type="number" name="edad" value="<%=@cliente.edad%>"/>  </td></tr>
+		<tr><td class="dcha"><label>Teléfono:</label></td> <td class="izq"><input type="tel" name="telefono" value="<%=@cliente.telefono%>"/>  </td></tr>
+		<tr><td class="dcha"><input type="submit" value="Salvar" /></td><td class="izq"><a href="/Clientes/index">Salir sin guardar</a></td></tr>
+	</table>		  	
+</form>		
+		

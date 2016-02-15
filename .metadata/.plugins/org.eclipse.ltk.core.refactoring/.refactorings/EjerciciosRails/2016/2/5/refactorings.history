@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EjerciciosRails/app/views/login_usuario/resultado.html.erb&apos; to &apos;login.html.erb&apos;" description="Rename resource &apos;resultado.html.erb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/views/login_usuario/resultado.html.erb" name="login.html.erb" stamp="1454411311651" updateReferences="true"/>
+</session>

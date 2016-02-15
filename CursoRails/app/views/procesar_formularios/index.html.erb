@@ -1,0 +1,32 @@
+
+<%= form_tag({controller: "ProcesarFormularios", action: "primera_pagina" }, method: "get") do %>
+<%= label_tag(:nombre, "Indica tu nombre:") %>
+<%= text_field_tag(:nombre) %>
+ <%= label_tag(:telefono, "Pon telefono") %>
+<%= number_field_tag(:telefono) %>
+<br>
+<%= check_box_tag("check_box_numeros[]", "uno")%> Uno
+<%= check_box_tag("check_box_numeros[]", "dos")%> Dos
+<%= check_box_tag("check_box_numeros[]", "tres")%> Tres
+
+<br>
+Te gusta el formulario?? <br>
+
+<%= radio_button_tag(:gusta, "Si")%> Si
+<%= radio_button_tag(:gusta, "No")%> No
+<br>
+<%= password_field_tag(:secreto)%> Contraseña
+<br>
+<%= date_field_tag(:fecha)%> Fecha de Nacimiento
+<br>
+<%= email_field_tag(:email)%> Escribe tu email
+<br>
+<%= color_field_tag(:color)%> Tu color
+<br>
+<%= number_field_tag(:edad, in: 1..100, step: 1)%> Con un rango
+<br>
+<%= text_area_tag(:comentarios, "observaciones", size: "20x5")%> 
+<br><br>
+
+<%= submit_tag("Enviar")%>
+<% end %>

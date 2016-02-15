@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RailsTemplates/app/views/prueba/_template_prueba.html.erb&apos; to &apos;_template_enlace.html.erb&apos;" description="Rename resource &apos;_template_prueba.html.erb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/views/prueba/_template_prueba.html.erb" name="_template_enlace.html.erb" stamp="1455094640644" updateReferences="true"/>
+</session>

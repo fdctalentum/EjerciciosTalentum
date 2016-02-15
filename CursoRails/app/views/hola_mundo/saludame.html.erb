@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Nuestro HolaMundo</title>
+<style type="text/css">
+		* {
+		margin: 10px;
+		}
+		
+		h1 {
+     	 color: red;
+     	 text-align: center;
+     	 padding: 10px;
+     	 margin-bottom: 5px;
+    }
+    	h1:hover{
+    		color:black;
+    		border: green 3px dotted;
+    		border-radius: 1em;
+    		padding: 10px;
+    	}
+    
+		p {
+	  font-family: Helvetica;
+	  font-size: 16px;
+	  color: blue;
+	  border: black 1px dashed;
+	  border-radius: 1em;
+	  padding: 5px;
+	  text-align: center;
+	  
+	}
+	
+	   .raro {
+	  font-family: Helvetica;
+	  font-size: 16px;
+	  color: green;
+	  border: red 1px dotted;
+	  border-radius: 1em;
+	  padding: 5px;
+	  text-align: center;
+	   	
+	   }
+	</style>
+
+</head>
+
+<body>
+	<h1>		
+		<%=@saludo%></br>
+		<%=@saludo%></br>
+		<%=@saludo%> 
+		
+	</h1>
+	
+	<p>Este es un pedazo de párrafo y tal pascual, no hemos puesto el meta del utf-8 así que vamos a ver si por defecto pone
+		las tíldes y las ñ </p>
+		
+	<p>Este es otro párrafo sólo porque me aburro y tal</p>
+	
+	<p class="raro">Tercer párrafo, porque el aburrimiento no tiene límites y así pruebo otros estilos</p>
+	
+</body>
+</html>

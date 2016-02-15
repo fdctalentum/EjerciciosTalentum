@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EjerciciosRuby/src/Ejercicio3.Modelodedatos/Direccion.rb&apos; to &apos;Agenda.rb&apos;" description="Rename resource &apos;Direccion.rb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Ejercicio3.Modelodedatos/Direccion.rb" name="Agenda.rb" stamp="1452511327942" updateReferences="true"/>
+</session>

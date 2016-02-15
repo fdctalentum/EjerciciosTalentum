@@ -1,0 +1,44 @@
+
+<h1>Dar de alta a clientes</h1>
+
+<h2>Ahora es cuando das de alta a los clientes </h2>
+  
+  <form action="/altacliente/procesarAlta">
+   	
+		Nombre: <input type="text" name="nombre" /></br>
+		Apellido: <input type="text" name="apellido" /></br>
+		Edad: <input type="number" name="edad" /></br>
+		Teléfono <input type="tel" name="telefono" /></br>
+		
+		<input type="submit" value="¡Alta!" />   	
+		
+		<table border="4" style="width:100%">
+			  <tr>
+   				 <th>Nombre</th>
+    			 <th>Apellido</th> 
+    			 <th>Edad</th>
+    			 <th>Detalle</th>
+  			  </tr>
+		<% 
+			  if @cliente != nil
+				for cliente in @cliente
+		
+		%>
+  			 
+  			   <tr>
+   				 <td><%=cliente.nombre%></td>
+   				 <td><%=cliente.apellido%></td> 
+   				 <td><%=cliente.edad%></td>
+   				 <td><a href="detalles.html.erb">Ver más detalles</a></td>
+ 			  </tr>
+ 	
+ 		<% 
+ 			end
+ 		end	
+ 		
+ 		%>
+ 		
+ 	
+			</table>
+  			 
+    </form>

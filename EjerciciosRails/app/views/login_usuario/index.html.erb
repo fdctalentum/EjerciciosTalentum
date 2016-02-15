@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Logeate</title>
+<style type="text/css">
+	
+	*{
+		margin: 10px;
+	}
+	
+	h1 {
+		
+		color: green;
+	}
+	
+	</style>
+</head>
+
+<body>
+	
+	<h1> Bienvenido al sitema </h1>
+
+	<form action="/loginUsuario/login" method="get">
+ 			
+ 			Usuario: <input type="text" name="usuario" required placeholder="Solo usuarios registrados"/>
+ 			Contraseña: <input type="password" name="contraseña" required placeholder="Escriba aquí su contraseña"/>
+ 						<input type="submit" value="Login" />	
+		</form>
+		
+	
+	<form action="/loginUsuario/registro" method="get">
+ 			
+ 			Usuario: <input type="text" name="usuario" required placeholder="Un usuario que no exista"/>
+ 			Contraseña <input type="password" name="contraseña" required placeholder="Escriba aquí su contraseña"/>
+ 						<input type="submit" value="Registro" />	
+		</form>
+
+
+</body>
+</html>

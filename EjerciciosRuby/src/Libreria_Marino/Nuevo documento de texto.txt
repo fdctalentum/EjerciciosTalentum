@@ -1,0 +1,23 @@
+Desarrolla una aplicación de administración de una librería
+El ejercicio consiste en desarrollar una serie de módulos que
+permitan separar las lógicas de la aplicación:
+Vamos a tener en cuenta los siguientes puntos:
+1. Genera una capa de negocio que se encargue de realizar las
+operaciones
+1. Alta
+2. Baja
+3. Modificación
+4. listar
+2. Crea un modelo de datos de Libro con los siguientes campos.
+1. Titulo
+2. Autor
+3. Descripción
+3. Crea unas clases de gestión de datos en memoria de los libros
+que serán invocadas desde la capa de negocio.
+4. Genera una clase de prueba que realice:
+1. Cuatro altas de libros
+2. Lista el contenido
+3. Borra un libro
+4. Lista el contenido
+5. Modifica un libro
+6. Lista de contenidos

@@ -1,0 +1,15 @@
+
+<h1> Detalle del cliente </h1>
+
+<h2> A continuación podrás ver los detalles de tu cliente seleccionado </h2>
+<table class="detalle"> 
+<tr><td class="dcha"><label>Id: </label></td> <td class="izq"><%=@cliente.id%></td></tr>
+<tr><td class="dcha"><label> Nombre:</label></td> <td class="izq"> <%=@cliente.nombre%></td></tr>
+<tr><td class="dcha"><label>Apellidos:</label></td><td class="izq"><%=@cliente.apellidos%></td></tr>
+<tr><td class="dcha"><label>Teléfono:</label></td> <td class="izq"> <%=@cliente.telefono%></td></tr>
+<tr><td class="dcha"><label>Edad:</label></td> <td class="izq"> <%=@cliente.edad%></td></tr>
+<tr><td class="dcha"><label><a href="/Clientes/modificar?id=<%=@cliente.id%>"> Modificar </a></label></td><td class="izq"><a href="/Clientes/borrar?id=<%=@cliente.id%>">Borrar</a></td></tr>
+<tr><td colspan="2"> <a href="/Clientes">Volver </a> </td></tr>
+</table>
+</br>
+

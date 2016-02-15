@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Pizzeria</title>
+<style type="text/css">
+  
+  * {
+  	
+  	margin: 10px;
+  }
+  
+  h1 {
+    
+    color: green;
+  }
+  
+  select {
+  	width: 100px;
+  	height: 100px;
+  }
+  
+  </style>
+</head>
+
+<body>
+	<h1>Bienvenido a tu pizzeria favorita</h1>
+  <h2>A continuación puedes realizar tu pedido </h2>
+  
+  <form>
+    
+   	  Dirección: <input type="text" name="direccion"></br>
+   	  Teléfono: <input type="tel" name="telefono"></br>
+   	  
+   	  Tamaño de la pizza:
+   	   
+   	  <select name="tamaño" multiple>
+   	  	<option value="pequeño">Pequeño</option>
+   	  	<option value="mediano">Mediano</option>
+   	  	<option value="grande">Grande</option>
+   	  </select> </br>
+   	  
+   	  Ingredientes: </br>
+   	  
+   	  <input type="checkbox" name="ingredientes[]" value="extraqueso"> Extra de queso
+  	  <input type="checkbox" name="ingredientes[]" value="jamon"> Jamón </br>
+  	  <input type="checkbox" name="ingredientes[]" value="pollo"> Pollo 
+  	  <input type="checkbox" name="ingredientes[]" value="barbacoa"> Salsa Barbacoa </br>
+  	  <input type="checkbox" name="ingredientes[]" value="aceitunas"> Aceitunas 
+  	  <input type="checkbox" name="ingredientes[]" value="maiz"> Maiz </br>
+      
+     
+      <input type="submit" value="Calcular Precio" formaction="/pedidoPizza/calcularPrecio" /> </br>
+     
+  	    <p> <%=@resultado%> </p>
+   
+  		<input type="submit" value="¡Pedir!" formaction="/pedidoPizza/procesado"/>
+  
+    </form>
+
+
+</body>
+</html>

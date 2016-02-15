@@ -1,0 +1,17 @@
+
+<h1>Página login</h1>
+
+<form action="/UsuarioSimple/validar">
+	Nombre: <input type="text" name="user">
+	Password: <input type="password" name="password">
+	<input type="submit" value="Enviar">
+<form>
+	<!-- -->
+	
+	<% if @bandera != true %>
+	<h3 style ="color:red"><%=@usuarioValido%></h3>
+	<% end %>
+	
+<a href="/UsuarioSimple/indexAlta">Ir a Alta</a>
+	
+
