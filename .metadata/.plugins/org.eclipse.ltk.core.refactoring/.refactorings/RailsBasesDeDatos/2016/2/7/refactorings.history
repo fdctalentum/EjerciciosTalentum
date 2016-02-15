@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;RailsBasesDeDatos/app/views/registro&apos; to &apos;busquedas.html.erb&apos;" description="Rename resource &apos;registro&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/views/registro" name="busquedas.html.erb" stamp="1455536358817" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;RailsBasesDeDatos/app/views/busquedas.html.erb&apos; to &apos;registro&apos;" description="Rename resource &apos;busquedas.html.erb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/views/busquedas.html.erb" name="registro" stamp="1455536379413" updateReferences="true"/>
+</session>

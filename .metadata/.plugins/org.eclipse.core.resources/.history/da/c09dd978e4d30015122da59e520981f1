@@ -1,0 +1,19 @@
+
+<%= form_tag({controller: "tienda", action: "create" }, method: "get") do %>
+<%= label_tag(:album, "Album:") %>
+<%= text_field_tag(:titulo, nil, placeholder: "Escribe aquí el título") %> <br />
+<%= label_tag(:comentarios, "Comentarios") %>
+<%= text_field_tag(:comentarios, nil, placeholder: "Comentario...") %> <br /> <br />
+<%= submit_tag("Crear")%>
+
+<% end %>
+
+<% if @registro != nil && @registro.errors.any? %>
+	<ul>
+	 	<% @registro.errors.full_messages.each do |mensaje_error| %>
+	 	<li class="errorValidacion"><%= mensaje_error %></li>
+	 	<% end %>
+	</ul>
+<% end %>
+
+	

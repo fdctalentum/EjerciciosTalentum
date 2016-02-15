@@ -1,0 +1,22 @@
+<h3>Buscamos por comentario</h3>
+<form action="/registro/buscar_por_comentario">
+	Comentario a buscar: <input type="text" name="comentario"><br />
+	<input type="submit" value="¡Buscar!">
+</form>
+
+
+<% if @registrosEncontrados != nil %>
+	<table>
+		<tr>
+			<th>Titulo</th>
+			<th>Comentarios</th>
+		</tr>
+		<% for registro in @registrosEncontrados %>
+		<tr>
+			<td><%= registro.titulo %></td>
+			<td><%= registro.comentarios%></td>
+		</tr>
+		<% end %>
+	</table>
+
+<% end %>

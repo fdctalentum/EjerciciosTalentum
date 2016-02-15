@@ -75,4 +75,10 @@ class RegistroController < ApplicationController
     end
   end
   
+  def buscar_por_comentario
+    comentarios = params[:comentarios]
+    @registrosEncontrados = Registro.where(["comentarios LIKE ?", "%#{comentarios}%"])
+    render :busquedas
+  end
+  
 end

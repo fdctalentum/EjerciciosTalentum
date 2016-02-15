@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'registro/delete'
   get 'registro/modificar'
   get 'registro/modificar_vista'
-  
+  get 'registro/busquedas'
+  get 'registro/buscar_por_comentario'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

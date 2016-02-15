@@ -1,0 +1,21 @@
+
+<%= form_tag({controller: "tienda", action: "create" }, method: "get") do %>
+<%= label_tag(:artista, "Artista:") %>
+<%= text_field_tag(:artista, nil, placeholder: "Escribe aquí el artísta") %> <br />
+<%= label_tag(:album, "Album:") %>
+<%= text_field_tag(:album, nil, placeholder: "Escribe aquí el título del álbum") %> <br /> <br />
+<%= label_tag(:year, "Año") %>
+<%= number_field_tag(:year, nil, placeholder: "Año de publicación") %> <br /> <br />
+<%= submit_tag("¡Nuevo Disco!")%>
+
+<% end %>
+
+<% if @registro != nil && @registro.errors.any? %>
+	<ul>
+	 	<% @registro.errors.full_messages.each do |mensaje_error| %>
+	 	<li class="errorValidacion"><%= mensaje_error %></li>
+	 	<% end %>
+	</ul>
+<% end %>
+
+	
