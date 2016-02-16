@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+  get 'template/index'
+
+  get 'template/enrutar'
+
+  get 'template/mostrar'
+
+  get 'template/resultado'
   
-  get ':controller(/:action(/:id(.:format)))'
-  
+  get 'template/ruta'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
