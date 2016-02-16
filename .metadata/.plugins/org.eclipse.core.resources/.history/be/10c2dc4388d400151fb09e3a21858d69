@@ -1,0 +1,20 @@
+
+<%= form_tag({controller: "tienda", action: "update" }, method: "get") do %>
+<%= label_tag(:titulo, "Título:") %>
+<%= text_field_tag(:titulo, @registro.titulo) %> <br />
+<%= label_tag(:comentarios, "Comentarios") %>
+<%= text_field_tag(:comentarios, @registro.comentarios) %> <br /> <br />
+<%= hidden_field_tag(:id, @registro.id)%>
+
+<!-- Si queremos que el campo id se vea, pero no se pueda modificar con un readonly, se pondría así -->
+<!-- <%= text_field_tag(:id, @registro.id, :readonly => true) %> -->
+<%= submit_tag("Modificar")%>
+<% end %>
+
+<% if @registro != nil && @registro.errors.any? %>
+	<ul>
+	 	<% @registro.errors.full_messages.each do |mensaje_error| %>
+	 	<li class="errorValidacion"><%= mensaje_error %></li>
+	 	<% end %>
+	</ul>
+<% end %>

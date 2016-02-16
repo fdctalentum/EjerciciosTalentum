@@ -1,0 +1,19 @@
+// Place all the styles related to the tienda controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+td {
+  text-align: center;
+}
+
+.errorValidacion {
+  color: red;
+}
+
+.par {
+  background-color: blue;
+}
+
+.impar {
+  background-color: yellow;
+}

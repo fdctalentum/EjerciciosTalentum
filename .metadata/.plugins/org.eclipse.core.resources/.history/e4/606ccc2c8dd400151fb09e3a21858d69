@@ -1,0 +1,46 @@
+
+<table class="form">
+	<%= form_tag({controller: "tienda", action: "create" }, method: "get") do %>
+<tr>
+	<td> <%= label_tag(:artista, "Artista:") %></td>
+	<td> <%= text_field_tag(:artista, nil, placeholder: "Escribe aquí el artísta") %></td>
+</tr>
+<tr>
+	<td><%= label_tag(:album, "Album:") %></td>
+	<td><%= text_field_tag(:album, nil, placeholder: "Escribe aquí el título del álbum") %></td>
+</tr>
+<tr>
+	<td><%= label_tag(:year, "Año") %></td>
+	<td><%= number_field_tag(:year, nil, placeholder: "Año de publicación") %></td>
+</tr>
+<tr>
+	<td><%= submit_tag("¡Nuevo Disco!")%></td>
+	<td><a href="/tienda/busquedas">¡Buscar!</a></td>
+</tr>
+ <% end %>
+</table>
+
+<table class="list">
+	<tr>
+		<th>ID</th>
+		<th>Artista</th>
+		<th>Album</th>
+		<th>Año</th>
+		<th>Borrar</th>
+		<th>Modificar</th>		
+	</tr>
+	<form action="/tienda/delete" />
+	<% for disco in @discos %>
+	
+	<tr><td><%= disco.id %> </td>
+		<td><%= disco.artista %></td>
+		<td><%= disco.album %></td>
+		<td><%= disco.year %></td>
+		<td><input type="checkbox" name="id[]" value="<%=disco.id%>"></td>
+		<td><a href="/tienda/modificar_vista?id=<%=disco.id%>">Modificar</a></td>
+	</tr>
+	
+	<% end %>
+		<input type="submit" value="Borrar" />
+	 </form>
+</table>

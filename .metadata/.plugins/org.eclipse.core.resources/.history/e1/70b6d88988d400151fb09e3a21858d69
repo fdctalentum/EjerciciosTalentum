@@ -1,0 +1,29 @@
+
+<table class="form">
+	<%= form_tag({controller: "tienda", action: "update" }, method: "get") do %>
+<tr>
+	<td> <%= label_tag(:artista, "Artista:") %></td>
+	<td> <%= text_field_tag(:artista, nil, placeholder: "Escribe aquí el artísta") %></td>
+</tr>
+<tr>
+	<td><%= label_tag(:album, "Album:") %></td>
+	<td><%= text_field_tag(:album, nil, placeholder: "Escribe aquí el título del álbum") %></td>
+</tr>
+<tr>
+	<td><%= label_tag(:year, "Año") %></td>
+	<td><%= number_field_tag(:year, nil, placeholder: "Año de publicación") %></td>
+</tr>
+<tr>
+	<td><%= submit_tag("¡Nuevo Disco!")%></td>
+	<td><a href="/tienda/busquedas">¡Buscar!</a></td>
+</tr>
+ <% end %>
+</table>
+
+<% if @disco != nil && @disco.errors.any? %>
+	<ul>
+	 	<% @disco.errors.full_messages.each do |mensaje_error| %>
+	 	<li class="errorValidacion"><%= mensaje_error %></li>
+	 	<% end %>
+	</ul>
+<% end %>

@@ -13,12 +13,4 @@
 
 ActiveRecord::Schema.define(version: 20160215124714) do
 
-  create_table "discos", force: true do |t|
-    t.string   "album"
-    t.string   "artista"
-    t.integer  "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
