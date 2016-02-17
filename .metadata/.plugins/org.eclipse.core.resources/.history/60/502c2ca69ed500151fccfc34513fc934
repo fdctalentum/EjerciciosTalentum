@@ -1,0 +1,14 @@
+require "test_helper"
+
+class AuthenticationTest < Capybara::Rails::TestCase
+  # test "sanity" do
+    # visit root_path
+    # assert_content page, "Hello World"
+    # refute_content page, "Goobye All!"
+  # end
+  test "a registered user can log in" do
+    visit root_path
+    
+    assert_content page, 'Log In'
+  end
+end
