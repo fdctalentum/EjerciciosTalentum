@@ -1,0 +1,35 @@
+class LibreriaController < ApplicationController
+
+  def index
+    
+  end
+  
+  def crear
+    
+  end
+  
+  def borrar
+    
+  end
+  
+  def modificar_vista
+    
+  end
+  
+  def modificar
+    
+  end
+  
+  def buscar_por_genero
+    
+  end
+  
+  def buscar_por_titulo
+    
+  end
+  
+  def buscar_por_autor
+    
+  end
+  
+end

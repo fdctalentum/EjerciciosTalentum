@@ -1,0 +1,35 @@
+h2>Modifica la película que quieras</h2>
+<form>
+	<table class="form">
+	
+		<input type="hidden" name="id" value="<%= @libro.id %>" /> 
+<tr>
+	<td><label>Titulo:</label></td>
+	<td><input type="text" name="titulo" value="<%= @libro.titulo %>" /></td>
+</tr>
+<tr>
+	<td><label>Año</label></td>
+	<td><input type="text" name="autor" value="<%= @libro.autor %>" /></td>
+</tr>
+<tr>
+	<td><label>Género: </label></td>
+	<td><input type="text" name="genero" value="<%= @libro.genero %>" /></td>
+</tr> 
+<tr>
+	<td><input type="submit" formaction="/libreria/modificar?id=<%= @libro.id %>" value="Modificar"></td>
+	<td><input type="submit" formaction="/libreria/index" value="Volver sin Guardar"</td>
+</tr>
+	
+	</table>
+</form>
+
+<% if @libro != nil && @libro.errors.any? %>
+	<ul>
+	 	<% @libro.errors.full_messages.each do |mensaje_error| %>
+	 	<li class="errorValidacion"><%= mensaje_error %></li>
+	 	<% end %>
+	</ul>
+<% end %>
+<% if @resultado = false then %>
+<p>La película no se pudo actualizar</p>
+<% end %>

@@ -1,0 +1,78 @@
+class LibreriaController < ApplicationController
+
+  def index
+    @libros = Libro.all
+  end
+  
+  def crear
+    titulo = params[:titulo]
+    autor = params[:autor]
+    genero = params[:genero]
+    
+    hashLibros = {}
+    hashLibros[:titulo] = titulo
+    hashLibros[:autor] = autor
+    hashLibros[:genero] = genero
+    
+    @libro = Libro.create(hashLibros)
+      if @libro.errors.any? then
+        puts "BDERROR: Error"
+      end
+    @libros = Libro.all
+    render :index
+  end
+  
+  def borrar
+    id = params[:id]
+    Libro.delete id
+    @libros = Libro.all
+    render :index
+  end
+  
+  def modificar_vista
+    id = params[:id]
+    @libro = Libro.find id
+    @libros = Libro.all
+    #:TODO : Si se puede, hacerlo en el index
+  end
+  
+  def modificar
+    id = params[:id]
+    titulo = params[:titulo]
+    autor = params[:autor]
+    genero = params[:genero]
+    
+    hashLibros = {}
+    hashLibros[:id] = id
+    hashLibros[:titulo] = titulo
+    hashLibros[:autor] = autor
+    hashLibros[:genero] = genero
+    
+    @libro = Libro.find id
+    
+    update = @pelicula.update_attributes(hashPelis)
+    
+      if update
+        @peliculas = Pelicula.all
+        @resultado = true #utilizaré esto para mostrar el resultado de la operación en el html.
+        render :index
+      else
+        @resultado = false
+        render :modificar_vista
+      end
+    
+  end
+  
+  def buscar_por_genero
+    
+  end
+  
+  def buscar_por_titulo
+    
+  end
+  
+  def buscar_por_autor
+    
+  end
+  
+end

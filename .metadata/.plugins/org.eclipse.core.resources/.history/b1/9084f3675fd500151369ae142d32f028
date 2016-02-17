@@ -1,0 +1,6 @@
+class Libro < ActiveRecord::Base
+
+  validates_uniqueness_of :titulo, message: '- El título ya existe'
+  validates_presence_of :titulo,:autor, message: '- El campo no puede estar vacío'
+
+end

@@ -1,0 +1,73 @@
+// Place all the styles related to the libreria controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.titulo {
+  text-decoration:none;
+  color:#979bcb; 
+}
+
+.par {
+  background-color: #e6e6e9;
+}
+
+.impar {
+  background-color: #b3b3b6;
+}
+
+form, .form {
+  margin: 20px auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.tabla {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.busqueda {
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+}
+
+
+.errorValidacion {
+  color: red;
+  font-weight: bold; 
+  text-align: center;
+  list-style-type:none;
+}
+
+h1,h2,h3 {
+  text-align: center;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-style: oblique;
+}
+
+.correcto{
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+th, td {
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+th {
+  background-color: #c0c4f6;
+  
+}
+
+th:hover,td:hover {
+  background-color: white;
+}
+

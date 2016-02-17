@@ -1,0 +1,96 @@
+<form>
+	<table class="form">
+	<tr>
+		<td><label>Título: </label></td>
+		<td><input type="text" name="titulo" placeholder="Escribe aquí el título"></td>
+	</tr>
+	<tr>
+		<td><label>Autor: </label></td>
+		<td><input type="text" name="autor" placeholder="Autor del libro"></td>
+	</tr>
+	<tr>
+		<td><label>Género: </label></td>
+		<td><input type="text" name="genero" placeholder="Género del libro"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="¡Alta!" formaction="/libreria/crear"></td>
+	</tr>
+	</table>
+</form>
+
+<form>
+	<table class="tabla">
+		<tr><th>Id</th>
+			<th>Titulo</th>
+			<th>Autor</th>
+			<th>Genero</th>
+			<th>Borrar</th>
+			<th>Modificar</th>		
+		</tr>
+		
+		<% 
+		contador = 0
+		for libro in @libros
+			if contador % 2 == 0
+				clase = "par"
+			else
+				clase = "impar"
+			end
+			contador += 1
+		%>
+		
+		<tr class="<%= clase %>">
+			<td><%= libro.id %> </td>
+			<td><%= libro.titulo %></td>
+			<td><%= libro.autor %></td>
+			<td><%= libro.genero %></td>
+			<td><input type="checkbox" name="id[]" value="<%=libro.id%>"/></td>
+			<td><a href="/libreria/modificar_vista?id=<%=libro.id%>">Modificar</a></td>
+		</tr>
+		
+		<% end %>
+		<tr>
+			<td colspan="6"><input type="submit" value="Borrar" formaction="/libreria/borrar"></td>
+		</tr>
+	</table>
+</form>
+
+<% if @libro != nil && @libro.errors.any? %>
+	<ul>
+	 	<% @libro.errors.full_messages.each do |mensaje_error| %>
+	 	<li class="errorValidacion"><%= mensaje_error %></li>
+	 	<% end %>
+	</ul>
+<% end %>
+
+<% if @resultado then %>
+<p class="correcto">Libro <%= @libro.id %> - "<%= @libro.titulo %>" actualizado correctamente</p>
+<% end %>
+
+<h3>Búsqueda de libros</h3>
+<form>
+	<input type="text" name="valor"/>
+	<input type="submit" value="Buscar por titulo" formaction="/libreria/buscar_por_titulo">
+	<input type="submit" value="Buscar por género" formaction="/libreria/buscar_por_genero">
+	<input type="submit" value="Buscar por autor" formaction="/libreria/buscar_por_autor">  
+</form>
+
+<% if @encontrados != nil%>
+
+<table class="table">
+	<tr>
+		<th>Titulo</th>
+		<th>Autor</th>
+		<th>Genero</th>
+	</tr>
+	<%
+	for encontrado in @encontrados
+	%>
+	<tr>
+		<td><%=encontrado.titulo%></td>
+		<td><%=encontrado.genero%></td>
+		<td><%=encontrado.year%></td>
+	</tr>
+	<% end %>
+</table>
+<% end %>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FelipeDominguez</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1><a href="/libreria/index">Bienvenidos a la librería del tío Paco</a></h1>
+
+<%= yield %>
+
+<footer>&copy; 2016 - Todos los derechos reservados para el tío Paco</footer>
+</body>
+</html>
