@@ -6973,3 +6973,25 @@ Caused by: org.jruby.exceptions.RaiseException: (Errno::EINVAL) =::
 
 !ENTRY org.eclipse.core.jobs 2 2 2016-02-16 14:34:01.645
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$1
+!SESSION 2016-02-17 08:36:43.207 -----------------------------------------------
+eclipse.buildId=3.6.1.201410201044
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.ruby.core 4 0 2016-02-17 08:37:13.447
+!MESSAGE (eval):1:in `block in get_classes': Use RbConfig instead of obsolete and deprecated Config.
+(eval):1: warning: variable $= is no longer effective
+(eval):1: warning: variable $KCODE is no longer effective
+(eval):1: warning: variable $KCODE is no longer effective
+C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:180:in `eval': Is a directory @ rb_sysopen - C:\Users\Arranque 1\Documents\repositorio\.metadata\.plugins\com.aptana.ruby.core\1555772558\4 (Errno::EISDIR)
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:180:in `eval'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:180:in `block (3 levels) in <main>'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:179:in `each'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:179:in `block (2 levels) in <main>'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:178:in `open'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:178:in `block in <main>'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:152:in `each'
+	from C:/AptanaStudio/configuration/org.eclipse.osgi/bundles/90/1/.cp/ruby/core_stubber.rb:152:in `<main>'
+
